@@ -66,17 +66,10 @@
   /* ---- Tabs ---- */
   .tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.75rem;
     margin-bottom: 2rem;
-    scrollbar-width: thin;
-    scrollbar-color: #2a2a3a #08080f;
-    -webkit-overflow-scrolling: touch;
   }
-  .tabs::-webkit-scrollbar { height: 4px; }
-  .tabs::-webkit-scrollbar-track { background: transparent; }
-  .tabs::-webkit-scrollbar-thumb { background: #2a2a3a; }
 
   .tab {
     font-family: 'Press Start 2P', monospace;

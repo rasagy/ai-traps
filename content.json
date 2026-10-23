@@ -1,0 +1,176 @@
+{
+  "categories": {
+    "output": { "label": "Output Risks", "color": "#a67cff", "description": "What comes out is compromised." },
+    "process": { "label": "Process Distortion", "color": "#ffb020", "description": "Your workflow gets warped." },
+    "overtrust": { "label": "Overtrust", "color": "#ff3b5c", "description": "You believe AI more than you should." },
+    "deskilling": { "label": "Deskilling", "color": "#00e5c3", "description": "You lose abilities you need." },
+    "accountability": { "label": "Accountability", "color": "#3ddc84", "description": "No one owns what goes out." }
+  },
+  "traps": [
+    {
+      "title": "Aesthetic Homogenisation",
+      "category": "output",
+      "short": "Everything starts looking the same.",
+      "description": "When everyone uses the same models and similar prompts, the output converges. AI-generated charts start to share the same gradients, the same rounded corners, the same safe colour palettes. Individual style disappears. The work looks competent and interchangeable — which is another way of saying it looks like nothing.",
+      "todo": "Develop and maintain a personal visual language that isn’t AI-derived. Use AI for speed, but make your final aesthetic choices by hand. If your chart could have come from anyone’s prompt, it’s not finished.",
+      "references": [
+        { "type": "Data-driven study", "label": "Zhou & Lee (2024) — Generative AI, Human Creativity, and Art, PNAS Nexus", "url": "https://academic.oup.com/pnasnexus/article/3/3/pgae052/7618478" }
+      ]
+    },
+    {
+      "title": "Context Collapse",
+      "category": "output",
+      "short": "One template for every audience.",
+      "description": "AI doesn’t know your audience, your client, your publication’s norms, or the political sensitivity of the data. It makes generic charts for a generic viewer. A chart about maternal mortality in rural India and a chart about smartphone sales get the same visual treatment unless you intervene.",
+      "todo": "Always ask: who is going to look at this, and what’s at stake for them? Provide that context in your prompt, but more importantly, evaluate the output through that lens yourself. AI can’t hold the audience in mind. You can.",
+      "references": [
+        { "type": "Seminal paper", "label": "Marwick & boyd (2011) — I Tweet Honestly, I Tweet Passionately: Context Collapse", "url": "https://journals.sagepub.com/doi/10.1177/1461444810365313" }
+      ]
+    },
+    {
+      "title": "Data Hallucination",
+      "category": "output",
+      "short": "Numbers that were never real.",
+      "description": "AI can invent data points, fabricate statistics, and generate plausible-sounding numbers that have no basis in your dataset. This is different from a calculation error — the model isn’t miscounting, it’s confabulating. In a data visualisation context, this means a chart can show a trend that doesn’t exist.",
+      "todo": "Never trust a number AI gives you without checking it against the source. If AI produced both the analysis and the chart, verify the analysis independently. A beautiful chart built on fake data is worse than no chart at all.",
+      "references": [
+        { "type": "Comprehensive survey", "label": "Ji et al. (2023) — Survey of Hallucination in Natural Language Generation, ACM Computing Surveys", "url": "https://arxiv.org/abs/2202.03629" }
+      ]
+    },
+    {
+      "title": "Anchoring",
+      "category": "process",
+      "short": "First draft becomes every draft.",
+      "description": "AI’s first output sets the frame for everything that follows. If AI generates a blue bar chart, your revisions will probably be variations on a blue bar chart — different shade, different layout, but the same basic idea. The first suggestion narrows your design space before you’ve explored it.",
+      "todo": "Generate several alternatives in your first prompt — ask for five very different approaches. Or better: sketch your own ideas before seeing AI’s. Once you’ve been anchored, it’s hard to un-anchor.",
+      "references": [
+        { "type": "Classic paper", "label": "Tversky & Kahneman (1974) — Judgment under Uncertainty: Heuristics and Biases", "url": "https://www.science.org/doi/10.1126/science.185.4157.1124" },
+        { "type": "AI-specific", "label": "Rastogi et al. (2022) — Deciding Fast and Slow: Cognitive Biases in AI-Assisted Decisions", "url": "https://arxiv.org/abs/2010.07938" }
+      ]
+    },
+    {
+      "title": "Satisficing",
+      "category": "process",
+      "short": "Stopping the moment it's good enough.",
+      "description": "Accepting the first “good enough” output and stopping. AI makes it easy to reach 70% quality in seconds, and that 70% looks convincingly done. The last 30% — the refinement, the specificity, the weird detail that makes a chart memorable — is what you skip because the quick version already looks like a deliverable.",
+      "todo": "Set a rule: AI’s first output is a draft, never a deliverable. Always do at least one round of refinement where you push beyond what AI gave you. The gap between generated and designed is where your value lives.",
+      "references": [
+        { "type": "Original paper", "label": "Herbert Simon (1956) — Rational Choice and the Structure of the Environment", "url": "https://psycnet.apa.org/record/1957-01985-001" }
+      ]
+    },
+    {
+      "title": "Prompt Fixation",
+      "category": "process",
+      "short": "Rewording instead of designing.",
+      "description": "Spending more and more time refining prompts instead of doing actual design work. You tweak wording, add constraints, restructure your instructions — and the activity feels productive because you’re getting different outputs each time. But prompt engineering is not designing. It’s negotiating with a machine.",
+      "todo": "Set a time limit on prompting. If three rounds of prompts haven’t given you what you need, stop prompting and start making. Open Figma. Open a notebook. The fastest path to a good chart is often your own hands.",
+      "references": [
+        { "type": "Empirical study", "label": "Desmond & Brachman (2024) — Exploring Prompt Engineering Practices in the Enterprise", "url": "https://arxiv.org/abs/2403.08950" }
+      ]
+    },
+    {
+      "title": "Speed–Quality Confusion",
+      "category": "process",
+      "short": "Fast and good aren't the same thing.",
+      "description": "AI makes things fast. Speed feels like progress. But fast output and good output are different things, and AI collapses the distinction. You can produce twenty chart variations in ten minutes and feel more productive than spending two hours on one considered design — even when the single design is better work.",
+      "todo": "Judge your output by quality, not quantity or speed. Ask: is this chart clearer, more honest, or more useful than what I would have made without AI? If the answer is no, the speed didn’t help.",
+      "references": [
+        { "type": "Key study", "label": "Dell’Acqua et al. (2023) — Navigating the Jagged Technological Frontier (BCG + Harvard)", "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321" }
+      ]
+    },
+    {
+      "title": "Competence Illusion",
+      "category": "overtrust",
+      "short": "Polish covering for wrong numbers.",
+      "description": "AI output looks polished and confident even when it’s wrong. A chart with clean axes, good typography, and a smooth colour palette can still show the wrong numbers. The surface quality hides the errors underneath — and because it looks like something a competent person made, you trust it more than you should.",
+      "todo": "Check the data behind any AI-generated chart before you judge the design. Read axis labels, verify totals, spot-check individual data points against the source. If you can’t verify it, you can’t publish it.",
+      "references": [
+        { "type": "Key paper", "label": "Vasconcelos et al. (2023) — Explanations Can Reduce Overreliance on AI Systems", "url": "https://arxiv.org/abs/2212.06823" },
+        { "type": "Founding concept", "label": "Rozenblit & Keil (2002) — The Illusion of Explanatory Depth", "url": "https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog2605_1" }
+      ]
+    },
+    {
+      "title": "Automation Bias",
+      "category": "overtrust",
+      "short": "Siding with the machine over yourself.",
+      "description": "The tendency to trust the output of an automated system over your own judgment, even when your judgment is right. If AI says “use a stacked bar chart” and your instinct says slope chart, you’ll probably go with AI — not because its reasoning is better, but because it’s a system and systems feel objective.",
+      "todo": "Treat AI suggestions the way you’d treat a junior colleague’s suggestion: worth hearing, worth interrogating, never worth accepting without thinking. Your instinct earned its place.",
+      "references": [
+        { "type": "Seminal review", "label": "Parasuraman & Manzey (2010) — Complacency and Bias in Human Use of Automation", "url": "https://journals.sagepub.com/doi/10.1177/0018720810376055" }
+      ]
+    },
+    {
+      "title": "The “Looks Right” Trap",
+      "category": "overtrust",
+      "short": "Familiar isn't the same as accurate.",
+      "description": "AI generates a chart that visually resembles something you’ve seen in the New York Times or the Economist. You feel reassured. But visual resemblance to a credible source doesn’t mean the content, encoding, or data behind it is accurate. Familiar form creates false trust.",
+      "todo": "Ask yourself: why does this look right? Is it because the data encoding is correct, or because the styling reminds me of something trustworthy? These are two different questions. Answer both.",
+      "references": [
+        { "type": "Key paper", "label": "Vasconcelos et al. (2023) — Overreliance on AI Systems During Decision-Making", "url": "https://arxiv.org/abs/2212.06823" }
+      ]
+    },
+    {
+      "title": "Sycophantic Confirmation",
+      "category": "overtrust",
+      "short": "It just tells you what you want.",
+      "description": "AI tends to agree with you. If you ask “is this a good chart?”, it will almost always say yes and list reasons why. This isn’t feedback — it’s flattery shaped like feedback.",
+      "todo": "Prompt for criticism specifically: “What’s wrong with this chart? Give me three problems.” Or better yet, show your work to a real human who will disagree with you. AI is a bad critic because it wants to please you.",
+      "references": [
+        { "type": "Key paper", "label": "Sharma et al. (2023) — Towards Understanding Sycophancy in Language Models", "url": "https://arxiv.org/abs/2310.13548" },
+        { "type": "First demonstration", "label": "Perez et al. (2022) — Discovering Language Model Behaviors with Model-Written Evaluations", "url": "https://arxiv.org/abs/2212.09251" }
+      ]
+    },
+    {
+      "title": "Cognitive Offloading",
+      "category": "deskilling",
+      "short": "Letting it think so you don't.",
+      "description": "When a tool can think for you, you stop thinking for yourself. If AI suggests chart types, you stop considering alternatives. If AI writes the annotation, you stop forming your own interpretation. The parts of your brain that do that work get quieter — not because you lost the ability, but because you stopped practising it.",
+      "todo": "Form your own opinion before you ask AI for one. Sketch three chart ideas by hand before prompting. Write your headline before generating one. Use AI to expand your thinking, not replace it.",
+      "references": [
+        { "type": "Seminal paper", "label": "Risko & Gilbert (2016) — Cognitive Offloading, Trends in Cognitive Sciences", "url": "https://pubmed.ncbi.nlm.nih.gov/27542527/" }
+      ]
+    },
+    {
+      "title": "Skill Atrophy",
+      "category": "deskilling",
+      "short": "Muscles you stopped using.",
+      "description": "Cognitive offloading, but over months and years. If you always let AI handle colour selection, data wrangling, or code, your own ability to do those things deteriorates. The danger isn’t that AI does it badly — it’s that when AI does it wrong, you no longer have the skill to notice.",
+      "todo": "Keep a short list of skills you refuse to delegate fully. Do them by hand regularly, even when AI could do them faster. Treat it like physical exercise — the point isn’t efficiency, it’s capacity.",
+      "references": [
+        { "type": "Founding classic", "label": "Bainbridge (1983) — Ironies of Automation", "url": "https://www.sciencedirect.com/science/article/abs/pii/0005109883900468" },
+        { "type": "Clinical evidence", "label": "Budzyń et al. (2025) — Endoscopist deskilling after AI exposure, The Lancet", "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00133-5/abstract" }
+      ]
+    },
+    {
+      "title": "Creative Learned Helplessness",
+      "category": "deskilling",
+      "short": "Forgetting you can start from nothing.",
+      "description": "After relying on AI for ideation repeatedly, you start to believe you can’t generate ideas on your own. “I’m not the creative one, AI is.” This is a self-reinforcing loop: the less you try, the more you feel you need AI, the less you try. Particularly dangerous for students still building creative confidence.",
+      "todo": "Start every project with your own ideas — even bad ones, even half-formed ones — before opening any AI tool. Protect the habit of generating from scratch. You can always use AI later. But the ability to start from nothing is yours to lose.",
+      "references": [
+        { "type": "Founding concept", "label": "Seligman & Maier (1967) — Failure to Escape Traumatic Shock", "url": "https://psycnet.apa.org/record/1967-08624-001" },
+        { "type": "AI application", "label": "Frontiers in Psychology (2026) — AI Dependency and Learned Helplessness in Higher Ed", "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1896371/full" }
+      ]
+    },
+    {
+      "title": "The Black Box Excuse",
+      "category": "accountability",
+      "short": "\"AI did it\" isn't a defence.",
+      "description": "“I don’t know why AI did that” becomes a way to avoid responsibility for your own design decisions. If a chart misleads, you point to the tool. But your name is on the work. You chose to use the output. You chose not to verify. “AI made it” is not a defence — it’s an admission that you gave up editorial control.",
+      "todo": "If you can’t explain every choice in your chart — why this encoding, why this scale, why this annotation — it’s not ready to publish. Own every pixel, even the ones AI placed there. Especially those.",
+      "references": [
+        { "type": "Key paper", "label": "Elish (2019) — Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction", "url": "https://estsjournal.org/index.php/ests/article/view/260" }
+      ]
+    },
+    {
+      "title": "Attribution Erosion",
+      "category": "accountability",
+      "short": "Losing track of whose idea it was.",
+      "description": "After iterating between your ideas and AI’s suggestions, you lose track of what came from you and what came from the model. This isn’t just an ethical question. It’s a practical problem: if you can’t tell what’s yours, you can’t build on your own strengths or develop a recognisable body of work.",
+      "todo": "Keep a log. Even a rough one. Note which ideas started with you and which came from AI. Over time, this helps you see your own patterns and protect what makes your work yours.",
+      "references": [
+        { "type": "Key paper", "label": "He et al. (2025) — Which Contributions Deserve Credit? Perceptions of Attribution in Human-AI Co-Creation, CHI 2025", "url": "https://dl.acm.org/doi/full/10.1145/3706598.3713522" }
+      ]
+    }
+  ]
+}

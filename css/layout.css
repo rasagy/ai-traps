@@ -1,0 +1,76 @@
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---- Page skeleton ---- */
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ---- Width container ---- */
+.inner {
+  max-width: var(--grid-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Sticky header offset ---- */
+section[data-category] {
+  scroll-margin-top: var(--header-h);
+}
+
+/* ---- Hazard stripe ---- */
+.stripe {
+  height: 10px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--accent) 0 12px,
+    var(--bg) 12px 24px
+  );
+}
+
+.stripe--hero {
+  --accent: var(--ink);
+  height: 10px;
+}
+
+/* ---- Trap card grid ---- */
+.trap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-w), 1fr));
+  gap: 24px;
+  max-width: var(--grid-max);
+  margin-inline: auto;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 639px) {
+  .stripe,
+  .stripe--hero {
+    height: 6px;
+  }
+}

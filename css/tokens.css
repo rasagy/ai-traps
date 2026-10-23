@@ -1,0 +1,43 @@
+:root {
+  /* surface */
+  --bg:            #0A0A0A;
+  --panel:         #121212;
+  --panel-raised:  #1A1A1A;
+  --rule:          #242424;
+  --rule-strong:   #2A2A2A;
+
+  /* ink */
+  --ink:           #F5F3EF;
+  --ink-dim:       #9A9A9A;
+  --ink-faint:     #6A6A6A;
+
+  /* category accents */
+  --cat-output:         #3D8BFF;
+  --cat-process:        #FFD100;
+  --cat-overtrust:      #FF6B00;
+  --cat-deskilling:     #FF3B30;
+  --cat-accountability: var(--ink);
+
+  /* type */
+  --font-display: "Big Shoulders Display", "Big Shoulders", Impact, sans-serif;
+  --font-body:    "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --step-hero:  clamp(3.5rem, 11vw, 9rem);
+  --step-cat:   clamp(2.25rem, 6vw, 4rem);
+  --step-trap:  clamp(1.5rem, 2.4vw, 2rem);
+  --step-body:  clamp(0.9375rem, 1vw, 1rem);
+  --step-label: 0.75rem;
+
+  /* space */
+  --gutter:   clamp(1.25rem, 4vw, 4rem);
+  --card-w:   300px;
+  --grid-max: 1272px;
+  --header-h: 64px;
+}
+
+/* set once per section; everything inside inherits */
+[data-category="output-risks"]        { --accent: var(--cat-output); }
+[data-category="process-distortion"]  { --accent: var(--cat-process); }
+[data-category="overtrust"]           { --accent: var(--cat-overtrust); }
+[data-category="deskilling"]          { --accent: var(--cat-deskilling); }
+[data-category="accountability"]      { --accent: var(--cat-accountability); }

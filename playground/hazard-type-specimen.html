@@ -1,0 +1,493 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Hazard Type Specimen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Kode+Mono:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@200..700&family=Saira+Condensed:wght@100;400;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@100..900&family=Big+Shoulders+Stencil:wght@100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench&family=Protest+Guerrilla&family=Sixtyfour+Convergence&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Chakra+Petch:wght@300;400;700&display=swap">
+
+<style>
+/* Layout: a stack of full-bleed specimen plates, each one a hazard placard —
+   mono data strip across the top, 72px headline, 24px body, spec footer. */
+:root{
+  --ink:#0e100d;          /* page ground, near-black with a green bias */
+  --plate:#191c17;        /* placard face */
+  --plate-2:#20241e;      /* raised strip */
+  --line:#3a4036;         /* hairline rule */
+  --fg:#e4e8df;           /* primary text */
+  --fg-dim:#8d9589;       /* secondary text */
+  --hz:#ffc400;           /* hazard amber */
+  --alert:#ff4b55;        /* alert red */
+  --sage:#b3bcb2;         /* brass-hands panel */
+  color-scheme:dark;
+}
+.sheet[data-surface="sage"]{
+  --plate:var(--sage);
+  --plate-2:#a3aca2;
+  --line:#5f685e;
+  --fg:#0e100d;
+  --fg-dim:#4d554c;
+  --hz:#0e100d;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--fg);
+  font-family:"Martian Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:1180px;
+  margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0;
+}
+.mono{
+  font-family:"Martian Mono","JetBrains Mono",ui-monospace,monospace;
+  font-stretch:condensed;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.stripe{
+  background-image:repeating-linear-gradient(45deg,var(--hz) 0 9px,transparent 9px 20px);
+}
+
+/* ---------- masthead ---------- */
+header{padding-block:40px 28px}
+.crest{
+  display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px 28px;
+  justify-content:space-between;
+}
+.crest h1{
+  font-family:"Martian Mono","JetBrains Mono",monospace;
+  font-stretch:condensed;font-weight:800;
+  font-size:clamp(28px,6vw,46px);
+  line-height:.98;margin:0;letter-spacing:-.01em;
+  text-wrap:balance;
+}
+.crest h1 em{font-style:normal;color:var(--hz)}
+.mark{
+  width:62px;height:62px;flex:none;
+  background:var(--hz);
+  display:grid;place-items:center;
+}
+.mark svg{width:40px;height:40px;display:block}
+.rule{height:2px;background:var(--fg);margin-top:18px}
+.subline{
+  display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;
+  padding-top:8px;color:var(--fg-dim);font-size:11px;
+}
+
+/* ---------- control bar ---------- */
+.controls{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:10;
+  background:var(--ink);
+  border-block:2px solid var(--fg);
+  margin-block:26px 0;
+}
+.controls .wrap{
+  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+  padding-block:11px;
+}
+.ctl-label{font-size:10px;color:var(--fg-dim)}
+.seg{display:flex;border:1px solid var(--line)}
+.seg button{
+  font:inherit;font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  font-family:"Martian Mono",monospace;font-stretch:condensed;
+  background:transparent;color:var(--fg-dim);
+  border:0;padding:7px 12px;cursor:pointer;
+}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--hz);color:var(--ink)}
+.seg button:focus-visible,.jump:focus-visible{outline:2px solid var(--hz);outline-offset:2px}
+.counter{margin-left:auto;font-size:10px;color:var(--fg-dim)}
+
+/* ---------- group heading ---------- */
+.group{padding-block:46px 14px}
+.group-head{display:flex;align-items:center;gap:14px}
+.group-head h2{
+  margin:0;font-size:clamp(17px,3.4vw,24px);
+  font-family:"Martian Mono",monospace;font-stretch:condensed;font-weight:800;
+  text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
+}
+.group-head .bar{flex:1;height:14px;min-width:0}
+.group p{margin:10px 0 0;color:var(--fg-dim);max-width:62ch;font-size:12px}
+
+/* ---------- specimen plate ---------- */
+.plate{
+  background:var(--plate);
+  border:2px solid var(--fg);
+  margin-bottom:22px;
+  overflow:hidden;
+}
+.plate-top{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;
+  background:var(--plate-2);
+  border-bottom:2px solid var(--fg);
+  padding:9px 14px;
+}
+.idx{
+  background:var(--fg);color:var(--plate);
+  padding:2px 7px;font-size:10px;font-weight:800;letter-spacing:.06em;
+}
+.fname{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.chip{
+  font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line);color:var(--fg-dim);
+  padding:2px 6px;white-space:nowrap;
+}
+.chip.hz{border-color:var(--hz);color:var(--hz)}
+.chip.miss{border-color:var(--alert);color:var(--alert)}
+
+.plate-body{padding:26px 18px 22px}
+.spec-h{
+  margin:0;
+  font-size:clamp(38px,8.6vw,72px);
+  line-height:1.02;
+  text-wrap:balance;
+  word-break:break-word;
+}
+.spec-p{
+  margin:18px 0 0;
+  font-size:clamp(17px,2.9vw,24px);
+  line-height:1.42;
+  max-width:46ch;
+  color:var(--fg);
+}
+.sheet[data-case="upper"] .spec-h,.sheet[data-case="upper"] .spec-p{text-transform:uppercase}
+
+.plate-foot{
+  display:flex;flex-wrap:wrap;gap:4px 20px;
+  border-top:1px solid var(--line);
+  padding:10px 14px;
+  font-size:10px;color:var(--fg-dim);
+}
+.plate-foot .dots{
+  flex:1;min-width:140px;display:flex;gap:8px;align-items:baseline;
+}
+.plate-foot .dots b{font-weight:400;color:var(--fg);white-space:nowrap}
+.plate-foot .dots i{
+  font-style:normal;flex:1;border-bottom:1px dotted var(--line);
+  transform:translateY(-3px);min-width:10px;
+}
+.verdict{flex-basis:100%;color:var(--fg);font-size:11px;line-height:1.5;
+  text-transform:none;letter-spacing:0;max-width:78ch}
+
+/* ---------- pairings ---------- */
+.pair{
+  border:2px solid var(--fg);background:var(--plate);
+  margin-bottom:22px;
+}
+.pair-top{
+  display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
+  padding:9px 14px;border-bottom:2px solid var(--fg);background:var(--plate-2);
+}
+.pair-top .arrow{color:var(--hz);font-weight:800}
+.pair-body{padding:26px 18px 24px}
+
+/* ---------- foot ---------- */
+.colophon{
+  border-top:2px solid var(--fg);margin-top:46px;padding-block:22px 54px;
+  color:var(--fg-dim);font-size:11px;
+}
+.colophon p{max-width:72ch;margin:0 0 10px}
+.colophon a{color:var(--hz)}
+.hzbar{height:16px;margin-bottom:22px}
+
+@media (prefers-reduced-motion:no-preference){
+  .plate{transition:background-color .25s ease,border-color .25s ease}
+}
+@media (max-width:520px){
+  .plate-body{padding:20px 14px 18px}
+  .chips{margin-left:0;flex-basis:100%}
+}
+</style>
+
+<div class="sheet" id="sheet" data-surface="dark" data-case="as">
+
+  <header>
+    <div class="wrap">
+      <div class="crest">
+        <h1>Hazard Type<br>Specimen <em>— 17</em></h1>
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#0e100d" stroke-width="2.4">
+            <circle cx="20" cy="13" r="6"/><circle cx="13.5" cy="25" r="6"/><circle cx="26.5" cy="25" r="6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <div class="subline mono">
+        <span>Google Fonts · condensed · monospace · stencil</span>
+        <span>Set at 72 / 24 px · Specimen AI-TRAPS-01</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="wrap">
+      <span class="ctl-label mono">Surface</span>
+      <div class="seg" role="group" aria-label="Surface">
+        <button type="button" data-surface-btn="dark" aria-pressed="true">Hazard dark</button>
+        <button type="button" data-surface-btn="sage" aria-pressed="false">Sage panel</button>
+      </div>
+      <span class="ctl-label mono">Case</span>
+      <div class="seg" role="group" aria-label="Case">
+        <button type="button" data-case-btn="as" aria-pressed="true">As written</button>
+        <button type="button" data-case-btn="upper" aria-pressed="false">All caps</button>
+      </div>
+      <span class="counter mono" id="counter">Loading faces…</span>
+    </div>
+  </div>
+
+  <main class="wrap" id="main"></main>
+
+  <div class="wrap">
+    <div class="colophon">
+      <div class="hzbar stripe" aria-hidden="true"></div>
+      <p>Every face here is on Google Fonts under an open licence. Headings are set in the family's heaviest available weight; body copy in its text weight, so each plate shows the family carrying both jobs on its own. Single-weight display faces (Anton, Bebas Neue, Protest Guerrilla, Workbench, Sixtyfour Convergence) have no text weight to fall back on — that is why their body copy looks loud, and why they belong in a pairing rather than alone.</p>
+      <p>Martian Mono is requested with <span class="mono">font-stretch: condensed</span> for headings and <span class="mono">semi-condensed</span> for body — Google Fonts serves it as static width instances, not a live axis.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FONTS = [
+    // ---------- popular ----------
+    { g:"pop", n:"Martian Mono", f:"Martian Mono", hw:800, hs:"condensed", bw:400, bs:"semi-condensed",
+      cat:"Monospace", tags:["Variable","100–800","wdth 75–112.5"], hz:true,
+      v:"The closest match in the whole library: a genuine condensed monospace that goes to ExtraBold. Headline and label voice in one family. Body copy at 24px is dense but readable for short runs." },
+    { g:"pop", n:"JetBrains Mono", f:"JetBrains Mono", hw:800, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["Variable","100–800"],
+      v:"Tall x-height makes it look denser than it is. Not condensed, so the headline runs wide — strongest as the body and label face under a condensed display." },
+    { g:"pop", n:"Space Mono", f:"Space Mono", hw:700, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["400 / 700"],
+      v:"Eurostile-adjacent quirks in the R, G and a. Enormous personality at 72px, fatiguing at 24px over a paragraph. Use it for headlines and leave the body to something quieter." },
+    { g:"pop", n:"Geist Mono", f:"Geist Mono", hw:800, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["Variable","100–900"],
+      v:"The neutral one. No opinion of its own, which is exactly what you want holding paragraphs under a shouting headline." },
+    { g:"pop", n:"Roboto Mono", f:"Roboto Mono", hw:700, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["Variable","100–700"],
+      v:"The baseline. Included so you can see what the others are buying you. Safe, legible, and completely without edge." },
+    { g:"pop", n:"Anton", f:"Anton", hw:400, hs:"normal", bw:400, bs:"normal",
+      cat:"Display sans", tags:["400 only","Condensed"], hz:true,
+      v:"The heaviest condensed face on Google Fonts, and the closest thing to real signage weight. One weight only, so it cannot carry body copy — pair it with a mono." },
+    { g:"pop", n:"Bebas Neue", f:"Bebas Neue", hw:400, hs:"normal", bw:400, bs:"normal",
+      cat:"Display sans", tags:["400 only","Caps only"],
+      v:"Caps only, which suits placard text but kills any sentence with a proper noun in it. Cleaner and less brutal than Anton." },
+    { g:"pop", n:"Oswald", f:"Oswald", hw:700, hs:"normal", bw:400, bs:"normal",
+      cat:"Condensed sans", tags:["Variable","200–700"],
+      v:"The flexible condensed option — a full weight range means one family can do headline, subhead and body. Widely used, so it carries less charge than Anton." },
+    { g:"pop", n:"Big Shoulders", f:"Big Shoulders", hw:900, hs:"normal", bw:500, bs:"normal",
+      cat:"Condensed sans", tags:["Variable","100–900","opsz"],
+      v:"Chicago's civic typeface. Very narrow, with an optical-size axis, so it holds up from 72px down to captions. The most complete condensed system here." },
+    { g:"pop", n:"Saira Condensed", f:"Saira Condensed", hw:800, hs:"normal", bw:400, bs:"normal",
+      cat:"Condensed sans", tags:["100–900"],
+      v:"Slightly squarer than Oswald, which pushes it toward instrument-panel rather than newspaper. Good middle ground if Big Shoulders is too narrow." },
+
+    // ---------- unusual ----------
+    { g:"odd", n:"Kode Mono", f:"Kode Mono", hw:700, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["Variable","400–700"], hz:true,
+      v:"Cut terminals and flat joins give it a machined feel without going full sci-fi. Barely used anywhere, so it will not date the site the way Space Mono might." },
+    { g:"odd", n:"Workbench", f:"Workbench", hw:400, hs:"normal", bw:400, bs:"normal",
+      cat:"Monospace", tags:["400 only","BLED","SCAN"], hz:true,
+      v:"Two custom axes, bleed and scanline, that you can animate from a crisp readout to a degraded signal. The scanning element from your third reference, in a single font file." },
+    { g:"odd", n:"Big Shoulders Stencil", f:"Big Shoulders Stencil", hw:800, hs:"normal", bw:500, bs:"normal",
+      cat:"Stencil", tags:["Variable","100–900"], hz:true,
+      v:"Crate-marking voice with a full weight range behind it. Rare among stencils: it can actually set a paragraph if you keep the run short." },
+    { g:"odd", n:"Protest Guerrilla", f:"Protest Guerrilla", hw:400, hs:"normal", bw:400, bs:"normal",
+      cat:"Stencil", tags:["400 only"],
+      v:"Angrier and rougher than Big Shoulders Stencil. One or two moments only — a QUARANTINE stamp, a section marker. Never a nav bar." },
+    { g:"odd", n:"Oxanium", f:"Oxanium", hw:800, hs:"normal", bw:400, bs:"normal",
+      cat:"Techy sans", tags:["Variable","200–800"],
+      v:"Angular, slightly flared, reads as interface rather than editorial. Fills the gap your references leave between the grotesque and the mono." },
+
+    // ---------- bonus ----------
+    { g:"bonus", n:"Sixtyfour Convergence", f:"Sixtyfour Convergence", hw:400, hs:"normal", bw:400, bs:"normal",
+      cat:"Bitmap", tags:["400 only","BLED","SCAN"],
+      v:"A CRT in font form, with bleed and scanline axes. Genuinely strange and completely unusable for body copy — which is the point. One word, once." },
+    { g:"bonus", n:"Chakra Petch", f:"Chakra Petch", hw:700, hs:"normal", bw:400, bs:"normal",
+      cat:"Techy sans", tags:["300 / 400 / 700"],
+      v:"Clipped corners and angled stems. More game HUD than lab label — closer to your third reference than your first." }
+  ];
+
+  var PAIRS = [
+    { h:{n:"Anton",f:"Anton",w:400,s:"normal"}, b:{n:"Martian Mono",f:"Martian Mono",w:400,s:"semi-condensed"},
+      v:"Maximum contrast. Signage headline, technical body. The most hazard of the four." },
+    { h:{n:"Big Shoulders",f:"Big Shoulders",w:900,s:"normal"}, b:{n:"Geist Mono",f:"Geist Mono",w:400,s:"normal"},
+      v:"Narrower and more civic. Easiest of the four to read at length." },
+    { h:{n:"Martian Mono",f:"Martian Mono",w:800,s:"condensed"}, b:{n:"JetBrains Mono",f:"JetBrains Mono",w:400,s:"normal"},
+      v:"All-mono system. Closest to the Stealth Engineering reference. Needs tight tracking to avoid feeling loose." },
+    { h:{n:"Big Shoulders Stencil",f:"Big Shoulders Stencil",w:800,s:"normal"}, b:{n:"Kode Mono",f:"Kode Mono",w:400,s:"normal"},
+      v:"The least expected combination here, and the one least likely to look like every other AI-risk site." }
+  ];
+
+  var HEAD = "AI Traps";
+  var BODY = "17 traps, biases, and failure modes that show up when designers use AI. Grouped by what they break. Click any card to see what to do about it.";
+
+  var GROUPS = [
+    { id:"pop", t:"Section 01 — Popular", d:"Faces most designers already have in their library. Safe, well-hinted, and widely supported — but widely used, which cuts both ways on a site about AI risk." },
+    { id:"odd", t:"Section 02 — Unusual", d:"Lower adoption, more specific voices. These are where the hazard aesthetic stops looking like a template." },
+    { id:"bonus", t:"Section 03 — Push further", d:"Accent faces. Useful for one word on one screen, and actively harmful anywhere else." }
+  ];
+
+  function el(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt != null) e.textContent = txt;
+    return e;
+  }
+  function stack(fam) { return '"' + fam + '", ui-monospace, monospace'; }
+
+  function plate(d, i) {
+    var p = el("article", "plate");
+    p.dataset.family = d.f;
+
+    var top = el("div", "plate-top");
+    top.appendChild(el("span", "idx", String(i).padStart(2, "0")));
+    top.appendChild(el("span", "fname mono", d.n));
+    var chips = el("div", "chips");
+    chips.appendChild(el("span", "chip" + (d.hz ? " hz" : ""), d.cat));
+    d.tags.forEach(function (t) { chips.appendChild(el("span", "chip", t)); });
+    top.appendChild(chips);
+    p.appendChild(top);
+
+    var body = el("div", "plate-body");
+    var h = el("h3", "spec-h", HEAD);
+    h.style.fontFamily = stack(d.f);
+    h.style.fontWeight = d.hw;
+    h.style.fontStretch = d.hs;
+    body.appendChild(h);
+
+    var para = el("p", "spec-p", BODY);
+    para.style.fontFamily = stack(d.f);
+    para.style.fontWeight = d.bw;
+    para.style.fontStretch = d.bs;
+    body.appendChild(para);
+    p.appendChild(body);
+
+    var foot = el("div", "plate-foot mono");
+    [["Head", d.hw + (d.hs !== "normal" ? " / " + d.hs : "")],
+     ["Body", d.bw + (d.bs !== "normal" ? " / " + d.bs : "")],
+     ["Size", "72 / 24 px"]].forEach(function (r) {
+      var dd = el("div", "dots");
+      dd.appendChild(el("b", null, r[0]));
+      dd.appendChild(el("i"));
+      dd.appendChild(el("b", null, r[1]));
+      foot.appendChild(dd);
+    });
+    foot.appendChild(el("p", "verdict", d.v));
+    p.appendChild(foot);
+    return p;
+  }
+
+  function pairBlock(d, i) {
+    var p = el("article", "pair");
+    var top = el("div", "pair-top mono");
+    top.appendChild(el("span", "idx", "P" + i));
+    top.appendChild(el("span", "fname", d.h.n));
+    top.appendChild(el("span", "arrow", "+"));
+    top.appendChild(el("span", "fname", d.b.n));
+    p.appendChild(top);
+
+    var body = el("div", "pair-body");
+    var h = el("h3", "spec-h", HEAD);
+    h.style.fontFamily = stack(d.h.f);
+    h.style.fontWeight = d.h.w;
+    h.style.fontStretch = d.h.s;
+    body.appendChild(h);
+    var para = el("p", "spec-p", BODY);
+    para.style.fontFamily = stack(d.b.f);
+    para.style.fontWeight = d.b.w;
+    para.style.fontStretch = d.b.s;
+    body.appendChild(para);
+    p.appendChild(body);
+
+    var foot = el("div", "plate-foot mono");
+    foot.appendChild(el("p", "verdict", d.v));
+    p.appendChild(foot);
+    return p;
+  }
+
+  var main = document.getElementById("main");
+  var n = 0;
+  GROUPS.forEach(function (g) {
+    var sec = el("section", "group");
+    var head = el("div", "group-head");
+    head.appendChild(el("h2", null, g.t));
+    var bar = el("div", "bar stripe");
+    bar.setAttribute("aria-hidden", "true");
+    head.appendChild(bar);
+    sec.appendChild(head);
+    sec.appendChild(el("p", null, g.d));
+    main.appendChild(sec);
+    FONTS.filter(function (f) { return f.g === g.id; }).forEach(function (f) {
+      main.appendChild(plate(f, ++n));
+    });
+  });
+
+  var psec = el("section", "group");
+  var phead = el("div", "group-head");
+  phead.appendChild(el("h2", null, "Section 04 — Pairings"));
+  var pbar = el("div", "bar stripe");
+  pbar.setAttribute("aria-hidden", "true");
+  phead.appendChild(pbar);
+  psec.appendChild(phead);
+  psec.appendChild(el("p", null, "Display face on the headline, text face on the body. This is how the references actually work — no single family is doing both jobs."));
+  main.appendChild(psec);
+  PAIRS.forEach(function (p, i) { main.appendChild(pairBlock(p, i + 1)); });
+
+  // controls
+  var sheet = document.getElementById("sheet");
+  function wire(attr, key) {
+    var btns = document.querySelectorAll("[data-" + attr + "]");
+    Array.prototype.forEach.call(btns, function (b) {
+      b.addEventListener("click", function () {
+        sheet.dataset[key] = b.getAttribute("data-" + attr);
+        Array.prototype.forEach.call(btns, function (o) {
+          o.setAttribute("aria-pressed", String(o === b));
+        });
+      });
+    });
+  }
+  wire("surface-btn", "surface");
+  wire("case-btn", "case");
+
+  // report any face that silently fell back
+  var counter = document.getElementById("counter");
+  var families = FONTS.map(function (f) { return f.f; });
+  if (document.fonts && document.fonts.ready) {
+    Promise.all(families.map(function (f) {
+      return document.fonts.load('400 24px "' + f + '"').catch(function () { return []; });
+    })).then(function () {
+      return document.fonts.ready;
+    }).then(function () {
+      var missing = families.filter(function (f) {
+        try { return !document.fonts.check('400 24px "' + f + '"'); } catch (e) { return false; }
+      });
+      counter.textContent = (families.length - missing.length) + " / " + families.length + " faces loaded";
+      missing.forEach(function (f) {
+        var p = document.querySelector('.plate[data-family="' + f + '"] .chips');
+        if (p) p.appendChild(el("span", "chip miss", "Not loaded"));
+      });
+    }).catch(function () { counter.textContent = families.length + " faces"; });
+  } else {
+    counter.textContent = families.length + " faces";
+  }
+})();
+</script>
+
+</body></html>

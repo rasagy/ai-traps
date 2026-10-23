@@ -16,7 +16,7 @@
   --cat-process:        #FFD100;
   --cat-overtrust:      #FF6B00;
   --cat-deskilling:     #FF3B30;
-  --cat-accountability: var(--ink);
+  --cat-accountability: #B8B8AE;
 
   /* type */
   --font-display: "Big Shoulders Display", "Big Shoulders", Impact, sans-serif;

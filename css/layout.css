@@ -53,11 +53,6 @@ section[data-category] {
   );
 }
 
-.stripe--hero {
-  --accent: var(--ink);
-  height: 10px;
-}
-
 /* ---- Trap card grid ---- */
 .trap-grid {
   display: grid;
@@ -69,8 +64,7 @@ section[data-category] {
 
 /* ---- Responsive ---- */
 @media (max-width: 639px) {
-  .stripe,
-  .stripe--hero {
+  .stripe {
     height: 6px;
   }
 }

@@ -6,6 +6,7 @@
   <title>AI Traps — A hazard index for designing with AI</title>
   <meta name="description" content="Sixteen ways designing with AI impacts design output, designers &amp; design as a practice, and what to do about each one.">
   <link rel="canonical" href="https://rasagy.in/ai-traps/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230A0A0A'/%3E%3Cg fill='%23FFD100'%3E%3Ccircle cx='12' cy='4.6' r='1.6'/%3E%3Cpath d='M10.4 6.8 C6.2 4.4 0.6 5.6 0.6 10.6 C0.6 14.6 5 16.4 9.2 14.3 C10.3 13.7 10.4 8.2 10.4 6.8 Z'/%3E%3Cpath d='M13.6 6.8 C17.8 4.4 23.4 5.6 23.4 10.6 C23.4 14.6 19 16.4 14.8 14.3 C13.7 13.7 13.6 8.2 13.6 6.8 Z'/%3E%3Cpath d='M12 6 C13.1 6 14 7.6 14 11.8 C14 16.6 13.1 20.5 12 20.5 C10.9 20.5 10 16.6 10 11.8 C10 7.6 10.9 6 12 6 Z'/%3E%3C/g%3E%3C/svg%3E">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
@@ -39,33 +40,33 @@
 
     <!-- Moth mark: symmetrical moth from above, ISO warning triangle on thorax -->
     <symbol id="moth" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.5"
+            stroke="currentColor" stroke-width="1.4"
             stroke-linecap="round" stroke-linejoin="round">
       <!-- Antennae -->
-      <path d="M11 5 Q9 2.5 7 1.5"/>
-      <path d="M13 5 Q15 2.5 17 1.5"/>
+      <path d="M10.8 4.2 C9.5 2.4 8.2 1.4 7 1"/>
+      <path d="M13.2 4.2 C14.5 2.4 15.8 1.4 17 1"/>
+      <!-- Head -->
+      <circle cx="12" cy="4.6" r="1.5"/>
+      <!-- Left wing -->
+      <path d="M10.4 6.8 C6.2 4.4 0.6 5.6 0.6 10.6 C0.6 14.6 5 16.4 9.2 14.3 C10.3 13.7 10.4 8.2 10.4 6.8 Z"/>
+      <!-- Right wing -->
+      <path d="M13.6 6.8 C17.8 4.4 23.4 5.6 23.4 10.6 C23.4 14.6 19 16.4 14.8 14.3 C13.7 13.7 13.6 8.2 13.6 6.8 Z"/>
       <!-- Body -->
-      <path d="M12 5 C13.2 5 14.2 6.5 14.2 12 C14.2 17.5 13.2 20 12 20 C10.8 20 9.8 17.5 9.8 12 C9.8 6.5 10.8 5 12 5 Z"/>
-      <!-- Upper left wing -->
-      <path d="M10 9.5 C7.5 8 3 6.5 1 9 C-0.5 11.5 1.5 14.5 5.5 13 L10 11.5"/>
-      <!-- Upper right wing -->
-      <path d="M14 9.5 C16.5 8 21 6.5 23 9 C24.5 11.5 22.5 14.5 18.5 13 L14 11.5"/>
-      <!-- Lower left wing -->
-      <path d="M10 13 C6.5 14 2 17.5 3.5 20.5 C5 23 9.5 22 11 18.5"/>
-      <!-- Lower right wing -->
-      <path d="M14 13 C17.5 14 22 17.5 20.5 20.5 C19 23 14.5 22 13 18.5"/>
+      <path d="M12 6 C13.1 6 14 7.6 14 11.8 C14 16.6 13.1 20.5 12 20.5 C10.9 20.5 10 16.6 10 11.8 C10 7.6 10.9 6 12 6 Z"/>
+      <!-- Body segment stripes -->
+      <path d="M10.3 10.3 L13.7 10.3"/>
+      <path d="M10.15 13.6 L13.85 13.6"/>
+      <path d="M10.45 16.9 L13.55 16.9"/>
       <!-- ISO warning triangle on thorax -->
-      <path d="M12 6.5 L9.2 11.5 L14.8 11.5 Z"/>
+      <path d="M12 7.6 L9.6 11.9 L14.4 11.9 Z" stroke="none" fill="currentColor"/>
       <!-- Exclamation mark inside triangle -->
-      <line x1="12" y1="7.8" x2="12" y2="10" stroke-linecap="round"/>
-      <circle cx="12" cy="10.8" r="0.5" fill="currentColor" stroke="none"/>
+      <line x1="12" y1="8.7" x2="12" y2="10.4" stroke="var(--bg, #0A0A0A)" stroke-width="0.9"/>
+      <circle cx="12" cy="11.2" r="0.45" fill="var(--bg, #0A0A0A)" stroke="none"/>
     </symbol>
 
-    <!-- Warning triangle for category headers (number rendered in markup) -->
-    <symbol id="warn-triangle" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.5"
-            stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 3 L22 21 L2 21 Z"/>
+    <!-- Warning triangle — filled, used in category headers and detail panels -->
+    <symbol id="warn-triangle" viewBox="0 0 24 24">
+      <path d="M12 1.5 L23 24 L1 24 Z" fill="currentColor"/>
     </symbol>
 
     <!-- Arrow diagonal (card bottom-right, reference rows) -->
@@ -92,101 +93,152 @@
       <path d="M13 6 L19 12 L13 18"/>
     </symbol>
 
-    <!-- ── Pictograms (placeholder squares until Phase 6) ── -->
-    <!-- OR-01: Aesthetic Homogenisation -->
+    <!-- Copy-link glyph -->
+    <symbol id="icon-copy" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="12" height="12" rx="1"/>
+      <path d="M6 15 H4 a1 1 0 0 1 -1 -1 V4 a1 1 0 0 1 1 -1 H15 a1 1 0 0 1 1 1 v2"/>
+    </symbol>
+
+    <!-- ── Pictograms: 24×24, 1.5 stroke, no fill (except small accent dots) ── -->
+
+    <!-- OR-01: Aesthetic Homogenisation — three identical stacked squares -->
     <symbol id="icon-aesthetic-homogenisation" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <rect x="3" y="9" width="12" height="12"/>
+      <rect x="6" y="6" width="12" height="12"/>
+      <rect x="9" y="3" width="12" height="12"/>
     </symbol>
 
-    <!-- OR-02: Context Collapse -->
+    <!-- OR-02: Context Collapse — funnel narrowing every input to one point -->
     <symbol id="icon-context-collapse" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M4 4 L20 4 L14 12 L14 20 L10 20 L10 12 Z"/>
     </symbol>
 
-    <!-- OR-03: Data Hallucination -->
+    <!-- OR-03: Data Hallucination — bar chart with one fabricated (dashed) bar -->
     <symbol id="icon-data-hallucination" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M3 21 L21 21"/>
+      <rect x="5" y="15" width="3" height="6"/>
+      <rect x="10.5" y="10" width="3" height="11"/>
+      <rect x="16" y="6" width="3" height="15" stroke-dasharray="2 2.2"/>
     </symbol>
 
-    <!-- PD-01: Anchoring -->
+    <!-- PD-01: Anchoring — a literal anchor -->
     <symbol id="icon-anchoring" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <circle cx="12" cy="4.5" r="1.8"/>
+      <path d="M12 6.3 L12 19"/>
+      <path d="M8 8.5 L16 8.5"/>
+      <path d="M6 13 C6 17.5 9 20.5 12 20.5 C15 20.5 18 17.5 18 13"/>
     </symbol>
 
-    <!-- PD-02: Satisficing -->
+    <!-- PD-02: Satisficing — a dial stopped at 70%, checked off anyway -->
     <symbol id="icon-satisficing" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <circle cx="12" cy="12" r="8" stroke-dasharray="35 15.3" transform="rotate(-90 12 12)"/>
+      <path d="M8.5 12.3 L10.8 14.8 L15.5 9.5"/>
     </symbol>
 
-    <!-- PD-03: Prompt Fixation -->
+    <!-- PD-03: Prompt Fixation — tuning sliders, endlessly adjusted -->
     <symbol id="icon-prompt-fixation" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M7 3 L7 21"/>
+      <path d="M12 3 L12 21"/>
+      <path d="M17 3 L17 21"/>
+      <path d="M4.5 8 L9.5 8"/>
+      <path d="M9.5 16 L14.5 16"/>
+      <path d="M14.5 11 L19.5 11"/>
     </symbol>
 
-    <!-- PD-04: Speed–Quality Confusion -->
+    <!-- PD-04: Speed–Quality Confusion — a stopwatch racing -->
     <symbol id="icon-speed-quality-confusion" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M9.5 3 L14.5 3"/>
+      <path d="M17.5 5.5 L19 4"/>
+      <circle cx="12" cy="13.5" r="8"/>
+      <path d="M12 13.5 L12 8.5"/>
+      <path d="M12 13.5 L16 13.5"/>
     </symbol>
 
-    <!-- OT-01: Competence Illusion -->
+    <!-- OT-01: Competence Illusion — a confident shield, cracked underneath -->
     <symbol id="icon-competence-illusion" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M12 3 L19 6 L19 12 C19 17 15.5 20 12 21 C8.5 20 5 17 5 12 L5 6 Z"/>
+      <path d="M10 8 L13 11.5 L10 14.5 L13 18"/>
     </symbol>
 
-    <!-- OT-02: Automation Bias -->
+    <!-- OT-02: Automation Bias — a scale tipped toward the machine's answer -->
     <symbol id="icon-automation-bias" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M12 4 L12 17"/>
+      <path d="M8 20.5 L16 20.5"/>
+      <path d="M12 17 L12 20.5"/>
+      <path d="M4.5 7 L19.5 11.5"/>
+      <path d="M4.5 7 L4.5 9.5"/>
+      <path d="M2.5 9.5 L6.5 9.5"/>
+      <path d="M19.5 11.5 L19.5 15"/>
+      <path d="M17 15 L22 15"/>
     </symbol>
 
-    <!-- OT-03: The "Looks Right" Trap -->
+    <!-- OT-03: The "Looks Right" Trap — a certified-looking badge -->
     <symbol id="icon-looks-right-trap" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <circle cx="12" cy="9.5" r="6.5"/>
+      <path d="M9 9.5 L11 11.5 L15.5 6.8"/>
+      <path d="M8 14.5 L8 20.5 L11 18 Z"/>
+      <path d="M16 14.5 L16 20.5 L13 18 Z"/>
     </symbol>
 
-    <!-- OT-04: Sycophantic Confirmation -->
+    <!-- OT-04: Sycophantic Confirmation — a speech bubble, instantly agreeing -->
     <symbol id="icon-sycophantic-confirmation" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M3 5 a2 2 0 0 1 2 -2 H19 a2 2 0 0 1 2 2 V14 a2 2 0 0 1 -2 2 H10 L6 19.5 L6.5 16 H5 a2 2 0 0 1 -2 -2 Z"/>
+      <path d="M8 9.5 L11 12.5 L16 7"/>
     </symbol>
 
-    <!-- DS-01: Cognitive Offloading -->
+    <!-- DS-01: Cognitive Offloading — thinking handed off and out -->
     <symbol id="icon-cognitive-offloading" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M9 5.5 C6 5.5 4.5 8 5.5 10 C3.8 10.8 3.8 13.8 5.5 14.5 C5.3 17 8 18.8 10.3 17.8 C11.3 19.3 14 19.3 15 17.8 C17.5 18.8 19.3 16.2 18.3 14.2 C19.8 12.8 19.3 9.8 17.3 9.3 C17.8 6.8 15.3 4.8 12.8 5.8 C11.3 4.3 9.8 4.3 9 5.5 Z"/>
+      <path d="M17.5 12 L22 12"/>
+      <path d="M19.5 10 L22 12 L19.5 14"/>
     </symbol>
 
-    <!-- DS-02: Skill Atrophy -->
+    <!-- DS-02: Skill Atrophy — a dumbbell fading from disuse -->
     <symbol id="icon-skill-atrophy" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <rect x="2.5" y="9" width="4" height="6" rx="1"/>
+      <path d="M6.5 12 L12 12"/>
+      <path d="M12 12 L19 12" stroke-dasharray="2 2.3"/>
+      <rect x="17.5" y="9" width="4" height="6" rx="1" stroke-dasharray="2 2.3"/>
     </symbol>
 
-    <!-- DS-03: Creative Learned Helplessness -->
+    <!-- DS-03: Creative Learned Helplessness — a pencil caged, unused -->
     <symbol id="icon-creative-learned-helplessness" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <path d="M4 4 L20 4"/>
+      <path d="M4 20 L20 20"/>
+      <path d="M5 4 L5 20 M9.5 4 L9.5 20 M14.5 4 L14.5 20 M19 4 L19 20"/>
+      <path d="M9 17 L15.5 7.5 L17 9 L10.5 18.5 Z"/>
     </symbol>
 
-    <!-- AC-01: The Black Box Excuse -->
+    <!-- AC-01: The Black Box Excuse — an opaque box, no explanation inside -->
     <symbol id="icon-black-box-excuse" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <rect x="4" y="6" width="16" height="14" rx="1"/>
+      <path d="M9.3 10 C9.3 8 11 7 12.5 7.6 C14 8.2 14.3 10.2 12.8 11 C11.8 11.6 11.8 12.3 11.8 13.3"/>
+      <circle cx="11.9" cy="16.3" r="0.6" fill="currentColor" stroke="none"/>
     </symbol>
 
-    <!-- AC-02: Attribution Erosion -->
+    <!-- AC-02: Attribution Erosion — a fingerprint dissolving at the edges -->
     <symbol id="icon-attribution-erosion" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18"/>
+      <circle cx="12" cy="12" r="3.2"/>
+      <circle cx="12" cy="12" r="5.6" stroke-dasharray="3 1.6"/>
+      <circle cx="12" cy="12" r="8" stroke-dasharray="1.4 2.6"/>
     </symbol>
 
   </defs>
@@ -235,7 +287,7 @@
         <span class="sr-only">Deskilling</span>
       </a>
       <a href="#accountability" class="site-header__nav-link" data-category="accountability"
-         style="--accent:var(--ink)">
+         style="--accent:var(--cat-accountability)">
         <span class="nav-swatch" aria-hidden="true"></span>
         <span class="nav-label">05</span>
         <span class="sr-only">Accountability</span>
@@ -243,14 +295,7 @@
     </nav>
   </div>
 
-  <!-- Five-segment colour rule -->
-  <div class="site-header__rule" aria-hidden="true">
-    <div class="site-header__rule-seg" style="background:var(--cat-output)"></div>
-    <div class="site-header__rule-seg" style="background:var(--cat-process)"></div>
-    <div class="site-header__rule-seg" style="background:var(--cat-overtrust)"></div>
-    <div class="site-header__rule-seg" style="background:var(--cat-deskilling)"></div>
-    <div class="site-header__rule-seg" style="background:var(--cat-accountability)"></div>
-  </div>
+  <div class="stripe" style="--accent:var(--ink)" aria-hidden="true"></div>
 </header>
 
 <!-- ============================================================
@@ -272,10 +317,1019 @@
         &amp; design as a practice, and what to do about each one.
       </p>
     </div>
-    <div class="stripe stripe--hero hero__stripe" aria-hidden="true"></div>
   </section>
 
-  <!-- ── CATEGORY SECTIONS WILL BE INSERTED HERE IN PHASE 2 ── -->
+  <!-- ====================================================
+       LAYER 01 — OUTPUT RISKS
+       ==================================================== -->
+  <section id="output-risks" data-category="output-risks" class="cat-section">
+    <div class="stripe cat-section__stripe" aria-hidden="true"></div>
+    <header class="cat-section__header">
+      <div class="cat-section__row">
+        <div class="cat-section__triangle-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#warn-triangle"/></svg>
+          <span class="cat-layer-num">01</span>
+        </div>
+        <div class="cat-section__title-block">
+          <span class="cat-layer">Layer 01</span>
+          <h2 class="cat-name">Output Risks</h2>
+        </div>
+      </div>
+      <p class="cat-tagline">What comes out is compromised.</p>
+    </header>
+    <div class="cat-section__grid">
+      <div class="trap-grid">
+
+        <a href="#aesthetic-homogenisation" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OR-01</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-aesthetic-homogenisation"/></svg></div>
+            </div>
+            <p class="trap-card__title">Aesthetic Homogenisation</p>
+            <p class="trap-card__short">Everything starts looking the same.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#context-collapse" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OR-02</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-context-collapse"/></svg></div>
+            </div>
+            <p class="trap-card__title">Context Collapse</p>
+            <p class="trap-card__short">Assumes a similar, generic audience every time.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#data-hallucination" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OR-03</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-data-hallucination"/></svg></div>
+            </div>
+            <p class="trap-card__title">Data Hallucination</p>
+            <p class="trap-card__short">Numbers that were never real.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+
+    <article id="aesthetic-homogenisation" class="trap-detail" role="dialog" aria-labelledby="title-or-01">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 01 / Output Risks
+          </div>
+          <span class="trap-detail__code">OR-01</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#output-risks" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-or-01" class="trap-detail__title">Aesthetic Homogenisation</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">When everyone uses the same models and similar prompts, the output converges. AI-generated charts start to share the same gradients, the same rounded corners, the same safe colour palettes. Individual style disappears. The work looks competent and interchangeable — which is another way of saying it looks like nothing.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Develop and maintain a personal visual language that isn't AI-derived. Use AI for speed, but make your final aesthetic choices by hand. If your chart could have come from anyone's prompt, it's not finished.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://academic.oup.com/pnasnexus/article/3/3/pgae052/7618478" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Zhou &amp; Lee (2024) — Generative AI, Human Creativity, and Art, PNAS Nexus</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#attribution-erosion" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: ATTRIBUTION EROSION</a>
+          <a href="#context-collapse" class="detail-nav-link detail-nav-link--next">NEXT: CONTEXT COLLAPSE<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="context-collapse" class="trap-detail" role="dialog" aria-labelledby="title-or-02">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 01 / Output Risks
+          </div>
+          <span class="trap-detail__code">OR-02</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#output-risks" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-or-02" class="trap-detail__title">Context Collapse</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI doesn't know your audience, your client, your publication's norms, or the political sensitivity of the data. It makes generic charts for a generic viewer. A chart about maternal mortality in rural India and a chart about smartphone sales get the same visual treatment unless you intervene.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Always ask: who is going to look at this, and what's at stake for them? Provide that context in your prompt, but more importantly, evaluate the output through that lens yourself. AI can't hold the audience in mind. You can.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://journals.sagepub.com/doi/10.1177/1461444810365313" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Marwick &amp; boyd (2011) — I Tweet Honestly, I Tweet Passionately: Context Collapse</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#aesthetic-homogenisation" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: AESTHETIC HOMOGENISATION</a>
+          <a href="#data-hallucination" class="detail-nav-link detail-nav-link--next">NEXT: DATA HALLUCINATION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="data-hallucination" class="trap-detail" role="dialog" aria-labelledby="title-or-03">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 01 / Output Risks
+          </div>
+          <span class="trap-detail__code">OR-03</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#output-risks" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-or-03" class="trap-detail__title">Data Hallucination</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI can invent data points, fabricate statistics, and generate plausible-sounding numbers that have no basis in your dataset. This is different from a calculation error — the model isn't miscounting, it's confabulating. In a data visualisation context, this means a chart can show a trend that doesn't exist.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Never trust a number AI gives you without checking it against the source. If AI produced both the analysis and the chart, verify the analysis independently. A beautiful chart built on fake data is worse than no chart at all.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://arxiv.org/abs/2202.03629" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Ji et al. (2023) — Survey of Hallucination in Natural Language Generation, ACM Computing Surveys</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#context-collapse" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: CONTEXT COLLAPSE</a>
+          <a href="#anchoring" class="detail-nav-link detail-nav-link--next">NEXT: ANCHORING<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+  </section><!-- #output-risks -->
+
+
+  <!-- ====================================================
+       LAYER 02 — PROCESS DISTORTION
+       ==================================================== -->
+  <section id="process-distortion" data-category="process-distortion" class="cat-section">
+    <div class="stripe cat-section__stripe" aria-hidden="true"></div>
+    <header class="cat-section__header">
+      <div class="cat-section__row">
+        <div class="cat-section__triangle-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#warn-triangle"/></svg>
+          <span class="cat-layer-num">02</span>
+        </div>
+        <div class="cat-section__title-block">
+          <span class="cat-layer">Layer 02</span>
+          <h2 class="cat-name">Process Distortion</h2>
+        </div>
+      </div>
+      <p class="cat-tagline">Your workflow gets warped.</p>
+    </header>
+    <div class="cat-section__grid">
+      <div class="trap-grid">
+
+        <a href="#anchoring" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">PD-01</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-anchoring"/></svg></div>
+            </div>
+            <p class="trap-card__title">Anchoring</p>
+            <p class="trap-card__short">First draft is the chosen direction.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#satisficing" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">PD-02</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-satisficing"/></svg></div>
+            </div>
+            <p class="trap-card__title">Satisficing</p>
+            <p class="trap-card__short">Stopping once it's good enough.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#prompt-fixation" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">PD-03</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-prompt-fixation"/></svg></div>
+            </div>
+            <p class="trap-card__title">Prompt Fixation</p>
+            <p class="trap-card__short">Focus shifts from designing to improving prompts.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#speed-quality-confusion" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">PD-04</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-speed-quality-confusion"/></svg></div>
+            </div>
+            <p class="trap-card__title">Speed–Quality Confusion</p>
+            <p class="trap-card__short">Fast and good aren't the same thing.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+
+    <article id="anchoring" class="trap-detail" role="dialog" aria-labelledby="title-pd-01">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 02 / Process Distortion
+          </div>
+          <span class="trap-detail__code">PD-01</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#process-distortion" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-pd-01" class="trap-detail__title">Anchoring</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI's first output sets the frame for everything that follows. If AI generates a blue bar chart, your revisions will probably be variations on a blue bar chart — different shade, different layout, but the same basic idea. The first suggestion narrows your design space before you've explored it.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Generate several alternatives in your first prompt — ask for five very different approaches. Or better: sketch your own ideas before seeing AI's. Once you've been anchored, it's hard to un-anchor.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://www.science.org/doi/10.1126/science.185.4157.1124" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Tversky &amp; Kahneman (1974) — Judgment under Uncertainty: Heuristics and Biases</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+              <a href="https://arxiv.org/abs/2010.07938" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Rastogi et al. (2022) — Deciding Fast and Slow: Cognitive Biases in AI-Assisted Decisions</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#data-hallucination" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: DATA HALLUCINATION</a>
+          <a href="#satisficing" class="detail-nav-link detail-nav-link--next">NEXT: SATISFICING<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="satisficing" class="trap-detail" role="dialog" aria-labelledby="title-pd-02">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 02 / Process Distortion
+          </div>
+          <span class="trap-detail__code">PD-02</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#process-distortion" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-pd-02" class="trap-detail__title">Satisficing</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">Accepting the first "good enough" output and stopping. AI makes it easy to reach 70% quality in seconds, and that 70% looks convincingly done. The last 30% — the refinement, the specificity, the weird detail that makes a chart memorable — is what you skip because the quick version already looks like a deliverable.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Set a rule: AI's first output is a draft, never a deliverable. Always do at least one round of refinement where you push beyond what AI gave you. The gap between generated and designed is where your value lives.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://psycnet.apa.org/record/1957-01985-001" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Herbert Simon (1956) — Rational Choice and the Structure of the Environment</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#anchoring" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: ANCHORING</a>
+          <a href="#prompt-fixation" class="detail-nav-link detail-nav-link--next">NEXT: PROMPT FIXATION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="prompt-fixation" class="trap-detail" role="dialog" aria-labelledby="title-pd-03">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 02 / Process Distortion
+          </div>
+          <span class="trap-detail__code">PD-03</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#process-distortion" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-pd-03" class="trap-detail__title">Prompt Fixation</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">Spending more and more time refining prompts instead of doing actual design work. You tweak wording, add constraints, restructure your instructions — and the activity feels productive because you're getting different outputs each time. But prompt engineering is not designing. It's negotiating with a machine.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Set a time limit on prompting. If three rounds of prompts haven't given you what you need, stop prompting and start making. Open Figma. Open a notebook. The fastest path to a good chart is often your own hands.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://arxiv.org/abs/2403.08950" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Desmond &amp; Brachman (2024) — Exploring Prompt Engineering Practices in the Enterprise</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#satisficing" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: SATISFICING</a>
+          <a href="#speed-quality-confusion" class="detail-nav-link detail-nav-link--next">NEXT: SPEED–QUALITY CONFUSION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="speed-quality-confusion" class="trap-detail" role="dialog" aria-labelledby="title-pd-04">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 02 / Process Distortion
+          </div>
+          <span class="trap-detail__code">PD-04</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#process-distortion" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-pd-04" class="trap-detail__title">Speed–Quality Confusion</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI makes things fast. Speed feels like progress. But fast output and good output are different things, and AI collapses the distinction. You can produce twenty chart variations in ten minutes and feel more productive than spending two hours on one considered design — even when the single design is better work.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Judge your output by quality, not quantity or speed. Ask: is this chart clearer, more honest, or more useful than what I would have made without AI? If the answer is no, the speed didn't help.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Dell'Acqua et al. (2023) — Navigating the Jagged Technological Frontier (BCG + Harvard)</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#prompt-fixation" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: PROMPT FIXATION</a>
+          <a href="#competence-illusion" class="detail-nav-link detail-nav-link--next">NEXT: COMPETENCE ILLUSION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+  </section><!-- #process-distortion -->
+
+
+  <!-- ====================================================
+       LAYER 03 — OVERTRUST
+       ==================================================== -->
+  <section id="overtrust" data-category="overtrust" class="cat-section">
+    <div class="stripe cat-section__stripe" aria-hidden="true"></div>
+    <header class="cat-section__header">
+      <div class="cat-section__row">
+        <div class="cat-section__triangle-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#warn-triangle"/></svg>
+          <span class="cat-layer-num">03</span>
+        </div>
+        <div class="cat-section__title-block">
+          <span class="cat-layer">Layer 03</span>
+          <h2 class="cat-name">Overtrust</h2>
+        </div>
+      </div>
+      <p class="cat-tagline">You believe AI more than you should.</p>
+    </header>
+    <div class="cat-section__grid">
+      <div class="trap-grid">
+
+        <a href="#competence-illusion" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OT-01</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-competence-illusion"/></svg></div>
+            </div>
+            <p class="trap-card__title">Competence Illusion</p>
+            <p class="trap-card__short">Highest confidence is in areas you know the least.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#automation-bias" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OT-02</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-automation-bias"/></svg></div>
+            </div>
+            <p class="trap-card__title">Automation Bias</p>
+            <p class="trap-card__short">Trusting the machine to always be right.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#looks-right-trap" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OT-03</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-looks-right-trap"/></svg></div>
+            </div>
+            <p class="trap-card__title">The "Looks Right" Trap</p>
+            <p class="trap-card__short">Familiar isn't the same as accurate.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#sycophantic-confirmation" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">OT-04</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-sycophantic-confirmation"/></svg></div>
+            </div>
+            <p class="trap-card__title">Sycophantic Confirmation</p>
+            <p class="trap-card__short">It just tells you what you want.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+
+    <article id="competence-illusion" class="trap-detail" role="dialog" aria-labelledby="title-ot-01">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 03 / Overtrust
+          </div>
+          <span class="trap-detail__code">OT-01</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#overtrust" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ot-01" class="trap-detail__title">Competence Illusion</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI output looks polished and confident even when it's wrong. A chart with clean axes, good typography, and a smooth colour palette can still show the wrong numbers. The surface quality hides the errors underneath — and because it looks like something a competent person made, you trust it more than you should.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Check the data behind any AI-generated chart before you judge the design. Read axis labels, verify totals, spot-check individual data points against the source. If you can't verify it, you can't publish it.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://arxiv.org/abs/2212.06823" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Vasconcelos et al. (2023) — Explanations Can Reduce Overreliance on AI Systems</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog2605_1" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Rozenblit &amp; Keil (2002) — The Illusion of Explanatory Depth</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#speed-quality-confusion" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: SPEED–QUALITY CONFUSION</a>
+          <a href="#automation-bias" class="detail-nav-link detail-nav-link--next">NEXT: AUTOMATION BIAS<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="automation-bias" class="trap-detail" role="dialog" aria-labelledby="title-ot-02">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 03 / Overtrust
+          </div>
+          <span class="trap-detail__code">OT-02</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#overtrust" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ot-02" class="trap-detail__title">Automation Bias</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">The tendency to trust the output of an automated system over your own judgment, even when your judgment is right. If AI says "use a stacked bar chart" and your instinct says slope chart, you'll probably go with AI — not because its reasoning is better, but because it's a system and systems feel objective.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Treat AI suggestions the way you'd treat a junior colleague's suggestion: worth hearing, worth interrogating, never worth accepting without thinking. Your instinct earned its place.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://journals.sagepub.com/doi/10.1177/0018720810376055" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Parasuraman &amp; Manzey (2010) — Complacency and Bias in Human Use of Automation</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#competence-illusion" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: COMPETENCE ILLUSION</a>
+          <a href="#looks-right-trap" class="detail-nav-link detail-nav-link--next">NEXT: THE "LOOKS RIGHT" TRAP<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="looks-right-trap" class="trap-detail" role="dialog" aria-labelledby="title-ot-03">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 03 / Overtrust
+          </div>
+          <span class="trap-detail__code">OT-03</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#overtrust" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ot-03" class="trap-detail__title">The "Looks Right" Trap</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI generates a chart that visually resembles something you've seen in the New York Times or the Economist. You feel reassured. But visual resemblance to a credible source doesn't mean the content, encoding, or data behind it is accurate. Familiar form creates false trust.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Ask yourself: why does this look right? Is it because the data encoding is correct, or because the styling reminds me of something trustworthy? These are two different questions. Answer both.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://arxiv.org/abs/2212.06823" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Vasconcelos et al. (2023) — Overreliance on AI Systems During Decision-Making</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#automation-bias" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: AUTOMATION BIAS</a>
+          <a href="#sycophantic-confirmation" class="detail-nav-link detail-nav-link--next">NEXT: SYCOPHANTIC CONFIRMATION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="sycophantic-confirmation" class="trap-detail" role="dialog" aria-labelledby="title-ot-04">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 03 / Overtrust
+          </div>
+          <span class="trap-detail__code">OT-04</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#overtrust" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ot-04" class="trap-detail__title">Sycophantic Confirmation</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">AI tends to agree with you. If you ask "is this a good chart?", it will almost always say yes and list reasons why. This isn't feedback — it's flattery shaped like feedback.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Prompt for criticism specifically: "What's wrong with this chart? Give me three problems." Or better yet, show your work to a real human who will disagree with you. AI is a bad critic because it wants to please you.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://arxiv.org/abs/2310.13548" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Sharma et al. (2023) — Towards Understanding Sycophancy in Language Models</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+              <a href="https://arxiv.org/abs/2212.09251" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Perez et al. (2022) — Discovering Language Model Behaviors with Model-Written Evaluations</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#looks-right-trap" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: THE "LOOKS RIGHT" TRAP</a>
+          <a href="#cognitive-offloading" class="detail-nav-link detail-nav-link--next">NEXT: COGNITIVE OFFLOADING<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+  </section><!-- #overtrust -->
+
+
+  <!-- ====================================================
+       LAYER 04 — DESKILLING
+       ==================================================== -->
+  <section id="deskilling" data-category="deskilling" class="cat-section">
+    <div class="stripe cat-section__stripe" aria-hidden="true"></div>
+    <header class="cat-section__header">
+      <div class="cat-section__row">
+        <div class="cat-section__triangle-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#warn-triangle"/></svg>
+          <span class="cat-layer-num">04</span>
+        </div>
+        <div class="cat-section__title-block">
+          <span class="cat-layer">Layer 04</span>
+          <h2 class="cat-name">Deskilling</h2>
+        </div>
+      </div>
+      <p class="cat-tagline">You lose abilities you need.</p>
+    </header>
+    <div class="cat-section__grid">
+      <div class="trap-grid">
+
+        <a href="#cognitive-offloading" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">DS-01</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-cognitive-offloading"/></svg></div>
+            </div>
+            <p class="trap-card__title">Cognitive Offloading</p>
+            <p class="trap-card__short">Letting it think so you don't have to.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#skill-atrophy" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">DS-02</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-skill-atrophy"/></svg></div>
+            </div>
+            <p class="trap-card__title">Skill Atrophy</p>
+            <p class="trap-card__short">Muscles you stopped using fade away.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#creative-learned-helplessness" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">DS-03</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-creative-learned-helplessness"/></svg></div>
+            </div>
+            <p class="trap-card__title">Creative Learned Helplessness</p>
+            <p class="trap-card__short">Forgetting you can start from nothing.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+
+    <article id="cognitive-offloading" class="trap-detail" role="dialog" aria-labelledby="title-ds-01">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 04 / Deskilling
+          </div>
+          <span class="trap-detail__code">DS-01</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#deskilling" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ds-01" class="trap-detail__title">Cognitive Offloading</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">When a tool can think for you, you stop thinking for yourself. If AI suggests chart types, you stop considering alternatives. If AI writes the annotation, you stop forming your own interpretation. The parts of your brain that do that work get quieter — not because you lost the ability, but because you stopped practising it.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Form your own opinion before you ask AI for one. Sketch three chart ideas by hand before prompting. Write your headline before generating one. Use AI to expand your thinking, not replace it.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://pubmed.ncbi.nlm.nih.gov/27542527/" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Risko &amp; Gilbert (2016) — Cognitive Offloading, Trends in Cognitive Sciences</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#sycophantic-confirmation" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: SYCOPHANTIC CONFIRMATION</a>
+          <a href="#skill-atrophy" class="detail-nav-link detail-nav-link--next">NEXT: SKILL ATROPHY<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="skill-atrophy" class="trap-detail" role="dialog" aria-labelledby="title-ds-02">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 04 / Deskilling
+          </div>
+          <span class="trap-detail__code">DS-02</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#deskilling" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ds-02" class="trap-detail__title">Skill Atrophy</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">Cognitive offloading, but over months and years. If you always let AI handle colour selection, data wrangling, or code, your own ability to do those things deteriorates. The danger isn't that AI does it badly — it's that when AI does it wrong, you no longer have the skill to notice.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Keep a short list of skills you refuse to delegate fully. Do them by hand regularly, even when AI could do them faster. Treat it like physical exercise — the point isn't efficiency, it's capacity.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/0005109883900468" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Bainbridge (1983) — Ironies of Automation</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+              <a href="https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00133-5/abstract" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Budzyń et al. (2025) — Endoscopist deskilling after AI exposure, The Lancet</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#cognitive-offloading" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: COGNITIVE OFFLOADING</a>
+          <a href="#creative-learned-helplessness" class="detail-nav-link detail-nav-link--next">NEXT: CREATIVE LEARNED HELPLESSNESS<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="creative-learned-helplessness" class="trap-detail" role="dialog" aria-labelledby="title-ds-03">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 04 / Deskilling
+          </div>
+          <span class="trap-detail__code">DS-03</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#deskilling" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ds-03" class="trap-detail__title">Creative Learned Helplessness</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">After relying on AI for ideation repeatedly, you start to believe you can't generate ideas on your own. "I'm not the creative one, AI is." This is a self-reinforcing loop: the less you try, the more you feel you need AI, the less you try. Particularly dangerous for students still building creative confidence.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Start every project with your own ideas — even bad ones, even half-formed ones — before opening any AI tool. Protect the habit of generating from scratch. You can always use AI later. But the ability to start from nothing is yours to lose.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://psycnet.apa.org/record/1967-08624-001" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Seligman &amp; Maier (1967) — Failure to Escape Traumatic Shock</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+              <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1896371/full" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Frontiers in Psychology (2026) — AI Dependency and Learned Helplessness in Higher Ed</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#skill-atrophy" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: SKILL ATROPHY</a>
+          <a href="#black-box-excuse" class="detail-nav-link detail-nav-link--next">NEXT: THE BLACK BOX EXCUSE<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+  </section><!-- #deskilling -->
+
+
+  <!-- ====================================================
+       LAYER 05 — ACCOUNTABILITY
+       ==================================================== -->
+  <section id="accountability" data-category="accountability" class="cat-section">
+    <div class="stripe cat-section__stripe" aria-hidden="true"></div>
+    <header class="cat-section__header">
+      <div class="cat-section__row">
+        <div class="cat-section__triangle-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#warn-triangle"/></svg>
+          <span class="cat-layer-num" style="color:var(--bg)">05</span>
+        </div>
+        <div class="cat-section__title-block">
+          <span class="cat-layer">Layer 05</span>
+          <h2 class="cat-name">Accountability</h2>
+        </div>
+      </div>
+      <p class="cat-tagline">No one owns what goes out.</p>
+    </header>
+    <div class="cat-section__grid">
+      <div class="trap-grid">
+
+        <a href="#black-box-excuse" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">AC-01</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-black-box-excuse"/></svg></div>
+            </div>
+            <p class="trap-card__title">The Black Box Excuse</p>
+            <p class="trap-card__short">"AI did it" isn't a defence.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+        <a href="#attribution-erosion" class="trap-card">
+          <div class="trap-card__inner">
+            <div class="trap-card__top">
+              <span class="trap-card__code">AC-02</span>
+              <div class="trap-card__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-attribution-erosion"/></svg></div>
+            </div>
+            <p class="trap-card__title">Attribution Erosion</p>
+            <p class="trap-card__short">Losing track of whose idea it was.</p>
+          </div>
+          <div class="trap-card__arrow" aria-hidden="true"><svg><use href="#arrow-ne"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+
+    <article id="black-box-excuse" class="trap-detail" role="dialog" aria-labelledby="title-ac-01">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 05 / Accountability
+          </div>
+          <span class="trap-detail__code">AC-01</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#accountability" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ac-01" class="trap-detail__title">The Black Box Excuse</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">"I don't know why AI did that" becomes a way to avoid responsibility for your own design decisions. If a chart misleads, you point to the tool. But your name is on the work. You chose to use the output. You chose not to verify. "AI made it" is not a defence — it's an admission that you gave up editorial control.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">If you can't explain every choice in your chart — why this encoding, why this scale, why this annotation — it's not ready to publish. Own every pixel, even the ones AI placed there. Especially those.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://estsjournal.org/index.php/ests/article/view/260" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">Elish (2019) — Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#creative-learned-helplessness" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: CREATIVE LEARNED HELPLESSNESS</a>
+          <a href="#attribution-erosion" class="detail-nav-link detail-nav-link--next">NEXT: ATTRIBUTION EROSION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+    <article id="attribution-erosion" class="trap-detail" role="dialog" aria-labelledby="title-ac-02">
+      <div class="trap-detail__panel">
+        <div class="trap-detail__accent-bar"></div>
+        <div class="trap-detail__head">
+          <div class="trap-detail__cat-info">
+            <svg class="trap-detail__cat-triangle" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#warn-triangle"/></svg>
+            Layer 05 / Accountability
+          </div>
+          <span class="trap-detail__code">AC-02</span>
+          <button type="button" class="trap-detail__copy" aria-label="Copy link to this trap"><svg class="trap-detail__copy-icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg><span class="trap-detail__copy-label">Copied</span></button>
+          <a href="#accountability" class="trap-detail__close" aria-label="Close">×</a>
+        </div>
+        <div class="trap-detail__body">
+          <h3 id="title-ac-02" class="trap-detail__title">Attribution Erosion</h3>
+          <div class="detail-section">
+            <p class="detail-section__label">01 / Hazard Identification</p>
+            <div class="detail-section__body">After iterating between your ideas and AI's suggestions, you lose track of what came from you and what came from the model. This isn't just an ethical question. It's a practical problem: if you can't tell what's yours, you can't build on your own strengths or develop a recognisable body of work.</div>
+          </div>
+          <div class="detail-section detail-section--control">
+            <p class="detail-section__label">02 / Control Measures</p>
+            <div class="detail-section__body">Keep a log. Even a rough one. Note which ideas started with you and which came from AI. Over time, this helps you see your own patterns and protect what makes your work yours.</div>
+          </div>
+          <div class="detail-section detail-section--refs">
+            <p class="detail-section__label">03 / References</p>
+            <div class="detail-section__body">
+              <a href="https://dl.acm.org/doi/full/10.1145/3706598.3713522" class="ref-row" target="_blank" rel="noopener noreferrer">
+                <span class="ref-type">Paper</span>
+                <span class="ref-label">He et al. (2025) — Which Contributions Deserve Credit? Perceptions of Attribution in Human-AI Co-Creation, CHI 2025</span>
+                <svg class="ref-arrow" aria-hidden="true" focusable="false"><use href="#arrow-ne"/></svg>
+                <span class="sr-only">opens in a new tab</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="trap-detail__nav" aria-label="Navigate traps">
+          <a href="#black-box-excuse" class="detail-nav-link detail-nav-link--prev"><svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-w"/></svg>PREV: THE BLACK BOX EXCUSE</a>
+          <a href="#aesthetic-homogenisation" class="detail-nav-link detail-nav-link--next">NEXT: AESTHETIC HOMOGENISATION<svg class="detail-nav-link__icon" aria-hidden="true" focusable="false"><use href="#arrow-e"/></svg></a>
+        </nav>
+      </div>
+    </article>
+
+  </section><!-- #accountability -->
 
 </main>
 

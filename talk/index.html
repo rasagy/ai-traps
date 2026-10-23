@@ -164,7 +164,9 @@
       width: clamp(3rem, 6vw, 5rem);
       height: clamp(3rem, 6vw, 5rem);
       flex-shrink: 0;
-      color: var(--ink);
+      background-color: var(--ink);
+      -webkit-mask: url('../data/moth-icon.svg') center / contain no-repeat;
+      mask: url('../data/moth-icon.svg') center / contain no-repeat;
     }
 
     .hero-title {
@@ -562,9 +564,7 @@
       <div class="stripe" style="--accent: var(--ink)"></div>
       <div class="slide__body">
         <div class="title-lockup">
-          <svg class="moth-mark" aria-hidden="true" focusable="false">
-            <use href="#moth"/>
-          </svg>
+          <div class="moth-mark" role="img" aria-label="AI Traps moth mark"></div>
         </div>
         <h1 class="hero-title">AI<br>Traps</h1>
         <p class="hero-subtitle">

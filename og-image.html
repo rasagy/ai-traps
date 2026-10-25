@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image — AI Traps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0A0A0A;
+      color: #F5F3EF;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .stripe {
+      height: 14px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #F5F3EF 0 18px,
+        #0A0A0A 18px 36px
+      );
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(630px - 14px);
+      padding: 60px 80px 56px;
+    }
+
+    .moth {
+      width: 90px;
+      height: 90px;
+      background-color: #F5F3EF;
+      -webkit-mask: url('data/moth-icon.svg') center / contain no-repeat;
+      mask: url('data/moth-icon.svg') center / contain no-repeat;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      font-family: "Big Shoulders Display", Impact, sans-serif;
+      font-weight: 900;
+      font-size: 148px;
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin-bottom: 28px;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .subtitle {
+      font-size: 36px;
+      color: #9A9A9A;
+      line-height: 1.5;
+    }
+
+    .byline {
+      font-size: 36px;
+      color: #6A6A6A;
+    }
+
+    .byline strong {
+      color: #F5F3EF;
+      font-weight: 700;
+    }
+
+    .url {
+      position: absolute;
+      bottom: 52px;
+      right: 80px;
+      font-family: "Big Shoulders Display", Impact, sans-serif;
+      font-weight: 900;
+      font-size: 56px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #6A6A6A;
+    }
+  </style>
+</head>
+<body>
+  <div class="stripe"></div>
+  <div class="content">
+    <div class="moth"></div>
+    <h1 class="title">AI Traps</h1>
+    <div class="meta">
+      <p class="subtitle">A field guide about how AI impacts design output, designers &amp; design as a practice.</p>
+      <p class="byline">Curated by <strong>Rasagy Sharma</strong>.</p>
+    </div>
+  </div>
+  <p class="url">rasagy.in/ai-traps</p>
+</body>
+</html>

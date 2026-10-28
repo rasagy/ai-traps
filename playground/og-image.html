@@ -24,7 +24,7 @@
       height: 14px;
       background: repeating-linear-gradient(
         -45deg,
-        #F5F3EF 0 18px,
+        #FFD100 0 18px,
         #0A0A0A 18px 36px
       );
     }
@@ -40,9 +40,6 @@
     .moth {
       width: 90px;
       height: 90px;
-      background-color: #F5F3EF;
-      -webkit-mask: url('../data/moth-icon.svg') center / contain no-repeat;
-      mask: url('../data/moth-icon.svg') center / contain no-repeat;
       margin-bottom: 24px;
     }
 
@@ -55,6 +52,7 @@
       text-transform: uppercase;
       white-space: nowrap;
       margin-bottom: 28px;
+      color: #FFD100;
     }
 
     .meta {
@@ -84,7 +82,7 @@
 <body>
   <div class="stripe"></div>
   <div class="content">
-    <div class="moth"></div>
+    <img class="moth" src="../data/moth-icon.svg" alt="AI Traps moth mark">
     <h1 class="title">AI Traps</h1>
     <div class="meta">
       <p class="subtitle">A field guide about how AI impacts design output, designers &amp; design as a practice.</p>

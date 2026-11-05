@@ -388,9 +388,11 @@
        COLUMNS LAYOUT
     ─────────────────────────────────────────── */
     .slide--columns .slide__body {
-      justify-content: flex-start;
-      padding-top: clamp(2rem, 5vh, 4rem);
-      padding-bottom: clamp(2rem, 5vh, 4rem);
+      justify-content: center;
+    }
+
+    .slide--columns .slide-heading {
+      margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
     }
 
     .col-grid {
@@ -398,6 +400,10 @@
       gap: clamp(1.5rem, 4vw, 3rem);
       margin-top: clamp(1.25rem, 3vh, 2rem);
       align-content: start;
+    }
+
+    .slide--columns .col-grid {
+      margin-top: clamp(2.5rem, 6vh, 4rem);
     }
 
     .col-grid[data-cols="2"] { grid-template-columns: repeat(2, 1fr); }
@@ -412,7 +418,7 @@
     .col-title {
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+      font-size: clamp(1.32rem, 2.64vw, 2.1rem);
       line-height: 1;
       text-transform: uppercase;
       letter-spacing: -0.01em;
@@ -422,7 +428,7 @@
 
     .col-body {
       font-family: var(--font-body);
-      font-size: clamp(1.125rem, 1.65vw, 1.3rem);
+      font-size: clamp(1.0rem, 1.485vw, 1.17rem);
       color: var(--ink-dim);
       line-height: 1.55;
     }
@@ -650,7 +656,7 @@
 
     <!-- ── SLIDE 1: TITLE ── -->
     <section class="slide slide--title" aria-label="Slide 1: Title">
-      <div class="stripe" style="--accent: var(--ink)"></div>
+      <div class="stripe" style="--accent: var(--cat-process)"></div>
       <div class="slide__body">
         <div class="title-lockup">
           <img class="moth-mark" src="../data/moth-icon.svg" role="img" alt="AI Traps moth mark">
@@ -665,7 +671,7 @@
 
     <!-- ── SLIDE 2: SPECTRUM ── -->
     <section class="slide slide--bio" aria-label="Slide 2: AI spectrum">
-      <div class="stripe" style="--accent: var(--cat-process)"></div>
+      <div class="stripe" style="--accent: var(--ink)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Where do you stand<br>on the AI spectrum?</h2>
         <nav class="timeline" aria-label="AI spectrum">
@@ -691,7 +697,7 @@
 
     <!-- ── SLIDE 3: BIO ── -->
     <section class="slide slide--bio" aria-label="Slide 3: About Rasagy">
-      <div class="stripe" style="--accent: var(--cat-process)"></div>
+      <div class="stripe" style="--accent: var(--cat-output)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Hi,<br>I'm Rasagy.</h2>
         <nav class="timeline" aria-label="Timeline">
@@ -717,7 +723,7 @@
           </div>
           <div class="timeline-item current">
             <span class="timeline-year">2026</span>
-            <span class="timeline-event">Conducted AI workshops &amp; courses, leading AI adoption at work</span>
+            <span class="timeline-event">Conducted AI workshops &amp; lead AI adoption at work</span>
           </div>
         </nav>
       </div>
@@ -725,7 +731,7 @@
 
     <!-- ── SLIDE 3: QUOTE ── -->
     <section class="slide slide--quote" aria-label="Slide 3: Thoreau quote">
-      <div class="stripe" style="--accent: var(--cat-output)"></div>
+      <div class="stripe" style="--accent: var(--cat-process)"></div>
       <div class="slide__body">
         <blockquote>
           <p class="quote-text">&ldquo;But lo!<br>Men have become the tools of their tools.&rdquo;</p>
@@ -795,7 +801,7 @@
       <div class="stripe" style="--accent: var(--cat-output)"></div>
       <div class="slide__body">
         <blockquote>
-          <p class="quote-text">&ldquo;Why does everything look, sound, &amp; feel the same?&rdquo;</p>
+          <p class="quote-text">&ldquo;Why does everything look, sound, &amp; even feel the same?&rdquo;</p>
         </blockquote>
       </div>
     </section>

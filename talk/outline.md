@@ -1,17 +1,17 @@
 ---
-# AI Traps [layout: title] [accent: ink]
+# AI Traps [layout: title] [accent: process]
 A field guide about how AI impacts design output, designers & design as a practice.
 By Rasagy Sharma
 
 ---
-# Where do you stand on the AI spectrum? [layout: bio] [accent: process]
+# Where do you stand on the AI spectrum? [layout: bio] [accent: ink]
 - Anti-AI: Don’t want to use it
 - AI Skeptic: Not confident in AI’s promises
 - AI Curious: Trying to explore what’s possible
 - Pro-AI: Love using it
 
 ---
-# Hi, I'm Rasagy. [layout: bio] [accent: process]
+# Hi, I'm Rasagy. [layout: bio] [accent: output]
 - 2016-2020: Designed data products powered by ML & AI
 - 2021: Amused by new AI tools
 - 2022: Anti-AI for image creation
@@ -20,7 +20,7 @@ By Rasagy Sharma
 - 2026: Conducted AI workshops & lead AI adoption at work
 
 ---
-# “But lo! Men have become the tools of their tools.” [layout: quote] [accent: output]
+# “But lo! Men have become the tools of their tools.” [layout: quote] [accent: process]
 — Henry David Thoreau (Walden, 1854)
 
 ---

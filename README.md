@@ -39,6 +39,12 @@ Vanilla HTML/CSS/JS, no frameworks, no build step. Single self-contained HTML fi
 1. Deskilling (3): Cognitive Offloading, Skill Atrophy, Creative Learned Helplessness
 1. Accountability (2): The Black Box Excuse, Attribution Erosion
 
+## Version history
+
+- **v1** (Sep 8, 2026) — Base website for lecture at IDC, IIT Bombay
+- **v2** (Oct 23, 2026) — Refreshed design & content for talk at Design Demo Nights
+- **v2.1** (Nov 6, 2026) — Expanded references & slides for talk at IIT Madras
+
 ## How AI was used in this project
 
 - Brainstorming trap terms beyond the initial list, and categorising them

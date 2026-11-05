@@ -1,32 +1,32 @@
-# 1
-## AI Traps
-_Field Guide about how AI impacts design output, designers & design as a practice._
-
+---
+# AI Traps [layout: title] [accent: ink]
+A field guide about how AI impacts design output, designers & design as a practice.
 By Rasagy Sharma
 
-# 2
-## Hi, I’m Rasagy. 
-I’m a former AI skeptic, turned cautiously optimist AI enthusiast.
+---
+# Hi, I'm Rasagy. [layout: bio] [accent: process]
+- 2016-2020: Designed data products powered by ML & AI
+- 2021: Amused by AI tools
+- 2022: Anti-AI for image creation
+- 2023: Won an AI hackathon, but stayed Anti-AI for creative output
+- 2025: Collaborated on AI-powered physical installation, exhibited at Kochi Biennale
+- 2026: Conducted multiple AI workshops & courses, leading AI adoption at work
 
-(Show a simple timeline)
-- 2020: Amused
-- 2022: Anti-AI
-- 2023: Won AI Hackathon, stayed Anti-AI for creative output
-- 2025: Creative Coding workshop at DesignUp
-- 2026: Multiple AI workshops (with Kenneth) & courses
+---
+# "But lo! Men have become the tools of their tools." [layout: quote] [accent: output]
+— Henry David Thoreau (Walden, 1854)
 
-# 3
-## “But lo! Men have become the tools of their tools.”
-– Henry David Thoreau (Walden, 1854)
+---
+# AI Traps [layout: overview] [accent: overtrust]
+16 concepts everyone who designs with AI should know. Across 5 layers:
 
-# 4 
+- Output Risks | What comes out is compromised. | 3
+- Process Distortion | Your workflow gets warped. | 4
+- Overtrust | You believe AI more than you should. | 4
+- Deskilling | You lose abilities you need. | 3
+- Accountability | No one is responsible for anything. | 2
 
-## AI Traps
-Set of 16 concepts that I’ve come across which everyone who is designing with AI should know about.
-Across 5 layers: Output Risks > Process Distortion > Overtrust > Deskilling > Accountability.
-
-# 5
-
-## https://rasagy.in/ai-traps
-
-@rasagy / @rasagy.sharma
+---
+# rasagy.in/ai-traps [layout: closing] [accent: ink]
+LinkedIn: @rasagy
+Instagram: @rasagy.sharma

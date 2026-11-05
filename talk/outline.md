@@ -34,10 +34,12 @@ By Rasagy Sharma
 - Accountability | No one is responsible for anything. | 2
 
 ---
-# “Why does everything look, sound, & feel the same?” [layout: quote] [accent: output]
+# “Why does everything look, sound, & even feel the same?” [layout: quote] [accent: output]
 
 ---
 # Output Risks [layout: columns] [accent: output] [cols: 3]
+
+What comes out is compromised.
 
 ### Aesthetic Homogenisation
 Everything starts looking the same.
@@ -53,6 +55,8 @@ Numbers that were never real.
 
 ---
 # Process Distortion [layout: columns] [accent: process] [cols: 4]
+
+Your workflow gets warped.
 
 ### Anchoring
 First draft is the chosen direction.
@@ -72,6 +76,8 @@ Fast and good aren’t the same thing.
 ---
 # Overtrust [layout: columns] [accent: overtrust] [cols: 4]
 
+You believe AI more than you should.
+
 ### Competence Illusion
 Highest confidence is in areas you know the least.
 
@@ -90,6 +96,8 @@ It just tells you what you want.
 ---
 # Deskilling [layout: columns] [accent: deskilling] [cols: 3]
 
+You lose abilities you need.
+
 ### Cognitive Offloading
 Letting it think so you don’t have to.
 
@@ -104,6 +112,8 @@ Forgetting you can start from nothing.
 
 ---
 # Accountability [layout: columns] [accent: accountability] [cols: 2]
+
+No one is responsible for anything.
 
 ### The Black Box Excuse
 “AI did it” isn’t a defence.

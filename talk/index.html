@@ -427,6 +427,14 @@
       line-height: 1.55;
     }
 
+    .col-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(1.35rem, 2.7vw, 1.875rem);
+      color: var(--ink-dim);
+      line-height: 1.5;
+      margin-top: clamp(0.25rem, 0.75vh, 0.5rem);
+    }
+
     @media (max-width: 639px) {
       .col-grid[data-cols="3"],
       .col-grid[data-cols="4"] {
@@ -797,6 +805,7 @@
       <div class="stripe" style="--accent: var(--cat-output)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Output Risks</h2>
+        <p class="col-subtitle">What comes out is compromised.</p>
         <div class="col-grid" data-cols="3" style="--accent: var(--cat-output)">
           <div class="col-item">
             <h3 class="col-title">Aesthetic Homogenisation</h3>
@@ -829,6 +838,7 @@
       <div class="stripe" style="--accent: var(--cat-process)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Process Distortion</h2>
+        <p class="col-subtitle">Your workflow gets warped.</p>
         <div class="col-grid" data-cols="4" style="--accent: var(--cat-process)">
           <div class="col-item">
             <h3 class="col-title">Anchoring</h3>
@@ -865,6 +875,7 @@
       <div class="stripe" style="--accent: var(--cat-overtrust)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Overtrust</h2>
+        <p class="col-subtitle">You believe AI more than you should.</p>
         <div class="col-grid" data-cols="4" style="--accent: var(--cat-overtrust)">
           <div class="col-item">
             <h3 class="col-title">Competence Illusion</h3>
@@ -901,6 +912,7 @@
       <div class="stripe" style="--accent: var(--cat-deskilling)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Deskilling</h2>
+        <p class="col-subtitle">You lose abilities you need.</p>
         <div class="col-grid" data-cols="3" style="--accent: var(--cat-deskilling)">
           <div class="col-item">
             <h3 class="col-title">Cognitive Offloading</h3>
@@ -933,6 +945,7 @@
       <div class="stripe" style="--accent: var(--cat-accountability)"></div>
       <div class="slide__body">
         <h2 class="slide-heading">Accountability</h2>
+        <p class="col-subtitle">No one is responsible for anything.</p>
         <div class="col-grid" data-cols="2" style="--accent: var(--cat-accountability)">
           <div class="col-item">
             <h3 class="col-title">The Black Box Excuse</h3>

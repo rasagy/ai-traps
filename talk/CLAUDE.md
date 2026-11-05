@@ -110,6 +110,7 @@ Body content…
 | `overview` | `.slide--overview` | Intro text + multi-row list (`name \| tagline \| count`) |
 | `section` | `.slide--section` | Category name + large accent stripe — section transition slide |
 | `content` | `.slide--content` | Heading + body text / bullet points |
+| `columns` | `.slide--columns` | Heading + 2/3/4 equal columns, each with title and body |
 | `closing` | `.slide--closing` | URL, social handles, QR code |
 
 ### overview rows
@@ -118,6 +119,43 @@ Use pipe notation in the outline — Claude converts each row to a `.layer-row`:
 
 ```
 - Output Risks | What comes out is compromised. | 3
+```
+
+### columns layout
+
+Add `[cols: 2]`, `[cols: 3]`, or `[cols: 4]` to control the grid. Each `###` heading starts a new column:
+
+```markdown
+# Output Risks [layout: columns] [accent: output] [cols: 3]
+
+### Hallucination
+AI confidently states things that are factually wrong.
+
+### Homogenisation
+Outputs converge on the same average style.
+
+### Hidden Bias
+Training data encodes biases that surface invisibly.
+```
+
+The column top-border picks up `--accent` automatically (same colour as the stripe). On narrow screens: 3–4 cols collapse to 2, then to 1 at very small widths.
+
+The HTML structure Claude generates from this:
+
+```html
+<section class="slide slide--columns">
+  <div class="stripe" style="--accent: var(--cat-output)"></div>
+  <div class="slide__body">
+    <h2 class="slide-heading">Output Risks</h2>
+    <div class="col-grid" data-cols="3" style="--accent: var(--cat-output)">
+      <div class="col-item">
+        <h3 class="col-title">Hallucination</h3>
+        <p class="col-body">AI confidently states things that are factually wrong.</p>
+      </div>
+      <!-- repeat for each ### -->
+    </div>
+  </div>
+</section>
 ```
 
 ### bio timeline

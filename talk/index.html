@@ -617,7 +617,7 @@
 <div class="progress-bar" id="progress-bar"></div>
 
 <!-- Slide counter -->
-<div class="counter" id="counter" aria-live="polite">1 / 16</div>
+<div class="counter" id="counter" aria-live="polite">1 / 17</div>
 
 <!-- Keyboard hint -->
 <div class="key-hint" aria-hidden="true">
@@ -643,7 +643,8 @@
   <button class="dot" aria-label="Slide 13: Deskilling"></button>
   <button class="dot" aria-label="Slide 14: Quote: Accountability"></button>
   <button class="dot" aria-label="Slide 15: Accountability"></button>
-  <button class="dot" aria-label="Slide 16: Closing"></button>
+  <button class="dot" aria-label="Slide 16: Ivan Illich quote"></button>
+  <button class="dot" aria-label="Slide 17: Closing"></button>
 </nav>
 
 <!-- Tap zones -->
@@ -965,7 +966,21 @@
       </div>
     </section>
 
-    <!-- ── SLIDE 16: URL / CLOSING ── -->
+    <!-- ── SLIDE 16: QUOTE — ILLICH ── -->
+    <section class="slide slide--quote" aria-label="Slide 16: Ivan Illich quote">
+      <div class="stripe" style="--accent: var(--ink)"></div>
+      <div class="slide__body">
+        <blockquote>
+          <p class="quote-text">&ldquo;People need new tools to work with rather than tools that &lsquo;work&rsquo; for them.&rdquo;</p>
+          <footer class="quote-attr">
+            — Ivan Illich<br>
+            <span style="color:var(--ink-faint)">Tools for Conviviality, 1973</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ── SLIDE 17: URL / CLOSING ── -->
     <section class="slide slide--closing" aria-label="Slide 5: URL and social">
       <div class="stripe" style="--accent: var(--ink)"></div>
       <div class="slide__body">
@@ -999,7 +1014,7 @@
   const tapPrev   = document.getElementById('tap-prev');
   const tapNext   = document.getElementById('tap-next');
 
-  const TOTAL = 16;
+  const TOTAL = 17;
   let current = 0;
   let isAnimating = false;
 

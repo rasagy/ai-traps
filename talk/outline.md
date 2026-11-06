@@ -122,6 +122,10 @@ No one is responsible for anything.
 Losing track of whose idea it was.
 
 ---
+# "People need new tools to work with rather than tools that 'work' for them." [layout: quote] [accent: ink]
+— Ivan Illich (Tools for Conviviality, 1973)
+
+---
 # rasagy.in/ai-traps [layout: closing] [accent: ink]
 LinkedIn: @rasagy
 Instagram: @rasagy.sharma
